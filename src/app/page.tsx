@@ -1,6 +1,5 @@
 'use client';
 
-import Container from '@/components/Container';
 import Item from '@/components/Item';
 import { useEffect, useRef } from 'react';
 import DATA from '@/data/lineup.json';
@@ -48,9 +47,9 @@ export default function Home() {
   };
   return (
     <main>
-      <Container>
+      <div className='relative mx-auto w-[1024px] lg:px-0 px-4 max-w-full'>
         <div className='flex justify-center md:gap-x-8 gap-x-5 flex-wrap mt-32'>{renderLineUp()}</div>
-      </Container>
+      </div>
     </main>
   );
 }
