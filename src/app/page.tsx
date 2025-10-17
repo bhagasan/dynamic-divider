@@ -49,7 +49,7 @@ export default function Home() {
   return (
     <main>
       <Container>
-        <div className='flex justify-center gap-x-8 flex-wrap mt-32'>{renderLineUp()}</div>
+        <div className='flex justify-center md:gap-x-8 gap-x-5 flex-wrap mt-32'>{renderLineUp()}</div>
       </Container>
     </main>
   );
