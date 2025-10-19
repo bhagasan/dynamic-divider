@@ -30,25 +30,21 @@ export default function Home() {
     return () => window.removeEventListener('resize', handleResize);
   }, []);
 
-  const renderLineUp = () => {
-    const elm: any[] = [];
-    DATA.forEach((d: any, idx: number) =>
-      elm.push(
-        <Item
-          key={d}
-          ref={(el) => {
-            if (el) itemsRef.current[idx] = el;
-          }}
-          label={d}
-        />,
-      ),
-    );
-    return elm;
-  };
+  const renderLineUp = () =>
+    DATA.map((d: any, idx: number) => (
+      <Item
+        key={d}
+        ref={(el) => {
+          if (el) itemsRef.current[idx] = el;
+        }}
+        label={d}
+      />
+    ));
+
   return (
     <main>
       <div className='relative mx-auto w-[1024px] lg:px-0 px-4 max-w-full'>
-        <div className='flex justify-center md:gap-x-8 gap-x-5 flex-wrap mt-32'>{renderLineUp()}</div>
+        <div className='flex justify-center md:gap-x-8 gap-x-5 flex-wrap mt-16'>{renderLineUp()}</div>
       </div>
     </main>
   );

@@ -9,7 +9,7 @@ const Dot = () => (
 );
 
 const Label = ({ value }: { value: string }) => (
-  <div className='font-semibold md:text-2xl text-lg tracking-wider'>{value}</div>
+  <div className='font-semibold md:text-3xl text-2xl tracking-wider'>{value}</div>
 );
 
 const Item = forwardRef<HTMLDivElement, { label: string }>(({ label }, ref) => (
