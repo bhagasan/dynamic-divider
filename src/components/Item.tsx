@@ -13,7 +13,7 @@ const Label = ({ value }: { value: string }) => (
 );
 
 const Item = forwardRef<HTMLDivElement, { label: string }>(({ label }, ref) => (
-  <div ref={ref} className='relative inlineflex items-center '>
+  <div ref={ref} className='relative inlineflex items-center hide-dot'>
     <Label value={label} />
     <Dot />
   </div>
